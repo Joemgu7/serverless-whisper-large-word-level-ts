@@ -14,6 +14,9 @@ RUN pip3 install -r requirements.txt
 # We add the banana boilerplate here
 ADD server.py .
 
+# Get the MODEL_NAME ARG from the docker build command
+ENV MODEL_NAME=large
+
 # Add your model weight files 
 # (in this case we have a python script)
 ADD download.py .
