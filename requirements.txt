@@ -1,0 +1,4 @@
+sanic==22.6.2
+openai-whisper @ git+https://github.com/openai/whisper.git@word-level-timestamps
+transformers
+accelerate
