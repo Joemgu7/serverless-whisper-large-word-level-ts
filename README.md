@@ -8,7 +8,7 @@ It also has added flexibility, it can accept more parameters than the stock Whis
 - `format` - The format of the audio file. Defaults to `mp3`, but can be any format supported by ffmpeg.
 - `kwargs` - A JSON string of additional arguments to pass to whisper.transcribe(). See the Whisper documentation for more information on the available arguments.
 
-It not only returns the text in the result, but also segment information and language information.
+It not only returns the text in the result, but also segment information including word level ts and language information.
 
 ## 🚀 Getting Started
 
@@ -43,7 +43,6 @@ model_inputs = {
   "format": "opus",
   "kwargs": {
     "beam_size": 4,
-    "temperature": [0.0, 0.2, 0.7],
   }
 }
 
