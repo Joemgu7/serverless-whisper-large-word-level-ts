@@ -4,7 +4,6 @@
 # In this example: A Huggingface BERT model
 
 import whisper
-import torch
 import os
 
 def download_model():
