@@ -1,4 +1,4 @@
-import whisper
+import whisper_timestamped as whisper
 import os
 import base64
 from io import BytesIO
@@ -41,7 +41,7 @@ def inference(model_inputs:dict) -> dict:
         file.write(bytes.getbuffer())
     
     # Run the model
-    result = model.transcribe(tmp_file, fp16=True, word_timestamps=True, **kwargs)
+    result = whisper.transcribe(model, tmp_file, fp16=True, **kwargs)
     result['segments'] = [{
         "id":x['id'],
         "seek":x['seek'],
